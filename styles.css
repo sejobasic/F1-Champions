@@ -1,0 +1,196 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* helper class that adds padding to our section */
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container {
+  max-width: 810px;
+  margin: auto;
+}
+
+.intro {
+  background-image: url(/assets/Monaco.jpeg);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  color: #fff;
+}
+
+.intro p {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: #dc0000;
+  text-align: center;
+  padding: 20px;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.marquee {
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  width: 100%;
+  /* Each letter will be 5% of the viewport width */
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 900;
+  /* This will stop the long text from causing scroll bars */
+  overflow: hidden;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3000vw);
+  }
+}
+
+.marquee span {
+  /* Shorthand animation css rule */
+  animation: moveLeft 200s infinite;
+  /* This will ensure the text stays all on the same line */
+  white-space: nowrap;
+  display: block;
+  position: relative;
+}
+
+.mix-difference {
+  mix-blend-mode: difference;
+}
+
+.top {
+  background-color: #00d2be;
+  color: #ecf0f2;
+}
+
+.mid {
+  background-color: #ff8700;
+  color: #005aff;
+}
+
+.low {
+  background-color: #005aff;
+}
+
+.sec {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sec .container {
+  position: relative;
+  z-index: 2;
+}
+
+.lineup {
+  text-align: center;
+  list-style: none;
+}
+
+.lineup h2 {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.lineup p {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.lineup li {
+  margin-bottom: 90px;
+}
+
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  z-index: 2;
+  width: 64px;
+  height: 32px;
+  background-image: url(/assets/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateX(-50%);
+}
+
+.driver-img {
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .marquee {
+    /* here we rest our marquee back to its default position */
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 90vw;
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    max-width: 64px;
+    margin-bottom: 24px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  .scroll-to {
+    display: none;
+  }
+
+  .lineup h2 {
+    font-size: 30px;
+  }
+}

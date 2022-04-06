@@ -1,0 +1,100 @@
+.flex-column {
+  flex-direction: column;
+}
+
+.register {
+  min-height: 65vh;
+  display: flex;
+  background-color: #ecf0f2;
+}
+
+.footer {
+  min-height: 35vh;
+  display: flex;
+  background-color: #111118;
+  text-align: center;
+}
+
+.button {
+  border: solid 2px #ecf0f2;
+  color: #ecf0f2;
+  line-height: 1;
+  padding: 6px 12px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register .container {
+  display: flex;
+}
+
+.register h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 48px;
+  color: #111118;
+}
+
+.form {
+  margin: 48px 24px;
+}
+
+.sign-up {
+  display: flex;
+  border-bottom: solid 2px #111118;
+  padding-bottom: 12px;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 21px;
+  outline: none;
+}
+
+.email-input {
+  /* this will tell our input to stretch out and fill availble space */
+  flex: 1;
+}
+
+.submit {
+  font-weight: 500;
+  color: #111118;
+}
+
+.car {
+  margin-top: 3vh;
+  width: 108px;
+  height: 89px;
+  background-image: url(/assets/car.png);
+}
+
+.trophy {
+  width: 57px;
+  height: 89px;
+  background-image: url(/assets/trophy.png);
+  /* This aligns the icon to the bottom of its container */
+  align-self: flex-end;
+}
+
+.car,
+.trophy {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 780px) {
+  .register .container {
+    flex-direction: column;
+  }
+  .register h2 {
+    font-size: 30px;
+  }
+  .form {
+    margin: 24px 0;
+  }
+}
